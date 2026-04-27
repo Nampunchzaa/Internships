@@ -52,7 +52,6 @@ if (isset($_POST['login'])) {
     <div class="login-card">
         <img src="img/Logo_of_Srinakharinwirot_University.svg.png" alt="logo" class="logo-img">
         <h2 class="login-title">ระบบจัดการข้อมูลการฝึกงานนิสิต</h2>
-        <h1>Hi</h1>
         <?php if($loginError): ?>
             <p style="color:var(--primary-red); margin-bottom: 20px; font-weight: 500;"><?= $loginError ?></p>
         <?php endif; ?>
