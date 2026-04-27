@@ -153,11 +153,8 @@ if(isset($_POST['reply_btn'])){
             <div class="card h-100 personnel-card shadow-sm">
                 <img src="img/dit.jpg" alt="อาจารย์ ดร.ดิษฐ์">
                 <div class="overlay-info">
-                    <strong>อาจารย์ ดร.ดิษฐ์ สุทธิวงศ์</strong>
+                    <strong>อาจารย์ ดร.ดิษฐ์ สุทธิวงศ์</strong> <br>
                     <small>(ประธานกรรมการบริหารหลักสูตร)</small>
-                    <div class="socail-mini">
-                        <i class="bi bi-envelope"></i>
-                    </div>
                 </div>
             </div>
         </div>
@@ -595,10 +592,7 @@ GPA ต่ำสุดกลุ่มสาระฯสังคม ศาสน
 </figure>
 
 <!-- ถามตอบ -->
-
-
-
-
+ 
 <meta charset="UTF-8">
 <title>Q&A</title>
 <link href="https://fonts.googleapis.com/css2?family=Srinakharinwirot:wght@400;700&display=swap" rel="stylesheet">
@@ -688,6 +682,18 @@ while($row = $result->fetch_assoc()){
                 <a href="https://www.facebook.com/isswuofficial/" class="social-link">FB</a>
             </div>
         </div>
+        <div class="footer-creators">
+            <h4>ผู้จัดทำ</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85em; line-height: 1.6; color: #fff;">
+                <li>นางสาวชญาดา มหาวรรณ 67101010127</li>
+                <li>นางสาวทิพทิวา เทพา 67101010622</li>
+                <li>นางสาวมาติกา ศิริพิน 67101010642</li>
+                <li>นางสาววรินธร ตั้งกิติวงศ์พร 67101010646</li>
+                <li>นางสาววิไลลักษณ์ โฉมทอง 67101010647</li>
+                <li>นางสาวสุชาดา สมอบ้าน 67101010648</li>
+                <li>นางสาวอรจิรา เหล่าพิเดช 67101010651</li>
+            </ul>
+        </div>
     </div>
 
     <div class="footer-bottom">
@@ -698,7 +704,4 @@ while($row = $result->fetch_assoc()){
 </footer>
 
 </body>
-</html>
-
-
-    
+</html>   
