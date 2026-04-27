@@ -17,7 +17,7 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center text-white" href="index.php" style="margin-right: 1rem;">
-            <img src="img/ดีไซน์ที่ยังไม่ได้ตั้งชื่อ (1).png" alt="Logo" class="d-inline-block align-text-top me-3 logo-circle">
+            <img src="img/logo1.png" alt="Logo">
             <div style="font-size: 1.2rem; line-height: 1.2;">
                 <strong>มหาวิทยาลัยศรีนครินทรวิโรฒ</strong><br>
                 <small>คณะมนุษยศาสตร์ สาขาสารสนเทศศึกษา</small>
@@ -200,6 +200,7 @@
 <!-- Footer -->
  <footer class="main-footer">
     <div class="footer-container">
+        
         <div class="footer-info">
             <img src="img/Srinakharinwirot_Logo_TH_White.png" alt="Logo" class="footer-logo">
             <h3>สารสนเทศศึกษา</h3>
@@ -223,6 +224,18 @@
                 <a href="https://www.facebook.com/isswuofficial/" class="social-link">FB</a>
             </div>
         </div>
+        
+        <div class="footer-contact">
+            <h4>ผู้จัดทำ</h4>
+            <p>นางสาวชญาดา มหาวรรณ</p>
+            <p>นางสาวทิพทิวา เทพา</p>
+            <p>นางสาวมาติกา ศิริพิน</p>
+            <p>นางสาววรินธร ตั้งกิติวงศ์พร</p>
+            <p>นางสาววิไลลักษณ์ โฉมทอง</p>
+            <p>นางสาวสุชาดา สมอบ้าน</p>
+            <p>นางสาวอรจิรา เหล่าพิเดช</p>
+        </div>
+        
     </div>
 
     <div class="footer-bottom">

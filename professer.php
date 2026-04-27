@@ -9,17 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Navbar -->
+</head>
+<body>
+
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center text-white" href="index.php" style="margin-right: 1rem;">
-            <img src="img/ดีไซน์ที่ยังไม่ได้ตั้งชื่อ (1).png" alt="Logo" class="d-inline-block align-text-top me-3 logo-circle">
+            <img src="img/logo1.png" alt="Logo">
             <div style="font-size: 1.2rem; line-height: 1.2;">
                 <strong>มหาวิทยาลัยศรีนครินทรวิโรฒ</strong><br>
                 <small>คณะมนุษยศาสตร์ สาขาสารสนเทศศึกษา</small>
             </div>
-        </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        </a> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -89,6 +91,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="col">
             <div class="card h-100 shadow-sm">
                 <img src="img/Chotima.jpg" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#modal5">
@@ -100,7 +103,8 @@
                 </div>
             </div>
         </div>
-         <div class="col">
+        
+        <div class="col">
             <div class="card h-100 shadow-sm">
                 <img src="img/Dussadee-683x1024.jpg" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#modal6">
                 <div class="card-body text-center">
@@ -111,6 +115,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="col">
             <div class="card h-100 shadow-sm">
                 <img src="img/Sasipimol-683x1024.jpg" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#modal7">
@@ -122,19 +127,20 @@
                 </div>
             </div>
         </div>
-            <div class="col">
+        
+        <div class="col">
             <div class="card h-100 shadow-sm">
                 <img src="img/Sumattra-683x1024.jpg" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#modal8">
                 <div class="card-body text-center">
                     <p class="card-text">
                         <strong>อาจารย์ ดร. ศุมรรษตรา แสนวา</strong><br>
                     </p>
-                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal8s">ดูข้อมูลเพิ่มเติม</button>
+                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal8">ดูข้อมูลเพิ่มเติม</button>
                 </div>
             </div>
         </div>
 
-     </div>
+    </div>
 </section>
 
 <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
@@ -151,12 +157,11 @@
                 <hr>
                 <p>ดร. ดิษฐ์ สุทธิวงศ์ Dit Suthiwong,Ph.D. <br> ประธานกรรมการบิหารหลักสูตร <br>
                     เบอร์โทรศัพท์ 081-5550581 <br> Email : dit.suthi@gmail.com <br>
-                    </p>
-                    <div class="mt-3 text-end">
-                        <a href="https://is.hu.swu.ac.th/cv/dit.pdf" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
-                            more
-                        </a>
-                    </div>
+                </p>
+                <div class="mt-3 text-end">
+                    <a href="https://is.hu.swu.ac.th/cv/dit.pdf" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
+                        more
+                    </a>
                 </div>
             </div>
         </div>
@@ -179,13 +184,13 @@
                     <br>เบอร์โทรศัพท์: 02-649-5000 ต่อ 16087 <br> Email: thitik@g.swu.ac.th
                 </p>
                 <div class="mt-3 text-end">
-                        <a href="https://sites.google.com/g.swu.ac.th/thitia" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
-                            more
-                        </a>
-                    </div>
+                    <a href="https://sites.google.com/g.swu.ac.th/thitia" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
+                        more
+                    </a>
+                </div>
             </div>
+        </div>
     </div>
-</div>
 </div>
 
 <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
@@ -200,13 +205,13 @@
                 <h4>ผู้ช่วยศาสตราจารย์ ดร.วิภากร วัฒนสินธุ์</h4>
                 <hr>
                 <p>ดร.วิภากร วัฒนสินธุ์ Vipakorn Vadhanasin,Ph.D. <br> ตำแหน่งทางวิชาการ ผู้ช่วยศาสตราจารย์
-                    <br> เบอร์โทรศัพท์ 02-649-5000 ต่อ 16508 <br>Email : vipakorn@g.swu.ac.t
+                    <br> เบอร์โทรศัพท์ 02-649-5000 ต่อ 16508 <br>Email : vipakorn@g.swu.ac.th
                 </p>
                 <div class="mt-3 text-end">
-                        <a href="https://is.hu.swu.ac.th/cv/vipakorn.pdf" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
-                            more
-                        </a>
-                    </div>
+                    <a href="https://is.hu.swu.ac.th/cv/vipakorn.pdf" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
+                        more
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -227,9 +232,9 @@
                     <br>เบอร์โทรศัพท์ 0-2649-5000 ต่อ 16292 <br>Email : chokthamrong@g.swu.ac.th
                 </p>
                 <div class="mt-3 text-end">
-                        <a href="https://is.hu.swu.ac.th/cv/chokthamrong.pdf" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
-                            more
-                        </a>
+                    <a href="https://is.hu.swu.ac.th/cv/chokthamrong.pdf" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
+                        more
+                    </a>
                 </div>
             </div>
         </div>
@@ -251,9 +256,9 @@
                     <br>E-mail: chotimaw@g.swu.ac.th
                 </p>
                 <div class="mt-3 text-end">
-                        <a href="https://is.hu.swu.ac.th/cv/chotima.pdf" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
-                            more
-                        </a>
+                    <a href="https://is.hu.swu.ac.th/cv/chotima.pdf" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
+                        more
+                    </a>
                 </div>
             </div>
         </div>
@@ -274,9 +279,9 @@
                 <p>ผู้ช่วยศาสตราจารย์ ดร.ดุษฎี สีวังคำ <br> Assistant Professor Dussadee Seewungkum,Ph.D.
                     <br>เบอร์โทรศัพท์ 02 649-5000 ต่อ 16292 <br> Email : dussadee@g.swu.ac.th</p>
                 <div class="mt-3 text-end">
-                        <a href="https://is.hu.swu.ac.th/cv/dussadee.pdf" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
-                            more
-                        </a>
+                    <a href="https://is.hu.swu.ac.th/cv/dussadee.pdf" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
+                        more
+                    </a>
                 </div>
             </div>
         </div>
@@ -296,10 +301,10 @@
                 <hr>
                 <p>ผู้ช่วยศาสตราจารย์ดร. ศศิพิมล ประพินพงศกร <br>Assistant Professor Sasipimol Prapinpongsakorn, Ph.D.
                     <br>เบอร์โทรศัพท์ 02 649-5000 ต่อ 16292 <br>Email : sasipimol@g.swu.ac.th </p>
-                    <div class="mt-3 text-end">
-                        <a href="https://is.hu.swu.ac.th/cv/sasipimol.pdf" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
-                            more
-                        </a>
+                <div class="mt-3 text-end">
+                    <a href="https://is.hu.swu.ac.th/cv/sasipimol.pdf" target="_blank" class="btn btn-danger btn-sm" style="width: 60px;">
+                        more
+                    </a>
                 </div>
             </div>
         </div>
@@ -330,13 +335,13 @@
 </div>
 
 <figure style="margin-top: 100px;">
-  
-  
+
 </figure>
 
- <!-- Footer -->
- <footer class="main-footer">
+<!-- Footer -->
+<footer class="main-footer">
     <div class="footer-container">
+        
         <div class="footer-info">
             <img src="img/Srinakharinwirot_Logo_TH_White.png" alt="Logo" class="footer-logo">
             <h3>สารสนเทศศึกษา</h3>
@@ -360,13 +365,26 @@
                 <a href="https://www.facebook.com/isswuofficial/" class="social-link">FB</a>
             </div>
         </div>
+        
+        <div class="footer-creators">
+            <h4>ผู้จัดทำ</h4>
+            <p>นางสาวชญาดา มหาวรรณ</p>
+            <p>นางสาวทิพทิวา เทพา</p>
+            <p>นางสาวมาติกา ศิริพิน</p>
+            <p>นางสาววรินธร ตั้งกิติวงศ์พร</p>
+            <p>นางสาววิไลลักษณ์ โฉมทอง</p>
+            <p>นางสาวสุชาดา สมอบ้าน</p>
+            <p>นางสาวอรจิรา เหล่าพิเดช</p>
+        </div>
+        
     </div>
 
     <div class="footer-bottom">
         <p>&copy; 2026 Information Studies SWU. All Rights Reserved.</p>
     </div>
-
+    
     <script src="./js/bootstrap.min.js"></script>
 </footer>
+
 </body>
 </html>

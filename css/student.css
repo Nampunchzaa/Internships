@@ -45,138 +45,83 @@
 /* Footer */
 .main-footer {
     background-color: #DA2128; /* สีแดง มศว */
-    padding: 25px 0 10px;      /* ลดขนาดพื้นที่สีแดง (บน 25px ล่าง 10px) */
+    padding: 25px 0 10px;
     color: white;
     font-family: 'Kanit', sans-serif;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-container {
-    max-width: 1100px;         /* ปรับความกว้างให้แคบลงเล็กน้อยเพื่อความสมดุล */
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr; /* ปรับสัดส่วนคอลัมน์ */
-    gap: 30px;
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr; /* บังคับ 4 คอลัมน์ (ให้หัว-ท้าย กว้างกว่าตรงกลาง) */
+    gap: 15px;
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 0 20px;
     align-items: start;
+    font-size: 0.85rem;
 }
 
-/* ส่วนโลโก้และข้อความ สารสนเทศศึกษา */
-.footer-info {
-    text-align: center;
-}
-
+/* จัดการระยะห่างและตัวหนังสือภายใน Footer */
 .footer-logo {
-    width: 65px;               /* ลดขนาดโลโก้ให้ดูเพรียวเข้ากับฟอนต์ */
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;
+    max-width: 110px;
+    margin-bottom: 10px;
 }
 
-.footer-info p {
-    font-size: 0.8rem;         /* ลดขนาดคำว่า สารสนเทศศึกษา และชื่อคณะลง */
-    line-height: 1.4;
-    margin: 0;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
+.footer-container h3 {
+    font-size: 1.1rem; /* ขนาดชื่อหลัก (สารสนเทศศึกษา) */
+    margin: 0 0 10px 0;
 }
 
-/* หัวข้อ (ลิงก์ / ติดต่อเรา) */
-.footer-links h4, .footer-contact h4 {
-    font-size: 1rem;           /* ลดขนาดหัวข้อลง */
-    font-weight: 500;
-    margin-bottom: 15px;
-    position: relative;
-    padding-bottom: 8px;
+.footer-container h4 {
+    font-size: 1rem; /* ขนาดหัวข้อรอง */
+    margin: 0 0 10px 0;
+    font-weight: 600;
 }
 
-/* เส้นขีดใต้หัวข้อ */
-.footer-links h4::after, .footer-contact h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 25px;
-    height: 2px;
-    background-color: white;
-}
-
-/* รายการลิงก์และข้อมูลติดต่อ */
 .footer-links ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-links ul li {
-    margin-bottom: 8px;
+.footer-links li {
+    margin-bottom: 5px; /* ลดระยะห่างระหว่างบรรทัดลิงก์ */
 }
 
-.footer-links ul li a, .footer-contact p {
+.footer-container a {
+    color: white;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.8rem;         /* ปรับขนาดเนื้อหาให้เล็กลงเท่ากันทั้งหมด */
-    transition: 0.3s;
 }
 
-.footer-links ul li a:hover {
-    color: #ffffff;
-    padding-left: 5px;
+/* ปรับขนาดส่วนผู้จัดทำและติดต่อเรา */
+.footer-contact p, 
+.footer-creators p {
+    margin: 0 0 4px 0;
+    line-height: 1.4; /* ปรับระยะบรรทัดให้กระชับขึ้น */
 }
 
-/* ปุ่ม Social */
-.social-icons {
-    margin-top: 10px;
-    display: flex;
-    gap: 8px;
+.footer-creators p {
+    font-size: 0.8rem; /* ชื่อผู้จัดทำตัวเล็กเป็นพิเศษเพื่อให้ดูเป็นระเบียบ */
 }
 
+/* ปุ่ม FB เล็กลง */
 .social-link {
-    width: 28px;
-    height: 28px;
-    background: white;
-    color: #DA2128;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 0.7rem;
-    transition: 0.3s;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    margin-top: 5px;
 }
 
-/* ส่วนลิขสิทธิ์ด้านล่างสุด */
 .footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 20px;
     padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    font-size: 0.75rem;        /* ขนาดฟอนต์เล็กพิเศษ */
-    color: rgba(255, 255, 255, 0.5);
-}
-
-/* สำหรับมือถือ */
-@media (max-width: 768px) {
-    .main-footer {
-        padding: 20px 0 10px;
-    }
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 20px;
-    }
-    .footer-links h4::after, .footer-contact h4::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .social-icons {
-        justify-content: center;
-    }
-    }
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-size: 0.75rem; /* Copyright ตัวเล็กสุด */
+    color: rgba(255, 255, 255, 0.8);
 }
 
 body {
