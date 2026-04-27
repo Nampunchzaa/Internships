@@ -1,0 +1,1015 @@
+body {
+
+  font-family: "Kanit", sans-serif;
+
+  font-weight: 400;
+
+}
+
+
+
+:root {
+
+    --primary-red: #D32F2F;
+
+    --dark-red: #B71C1C;
+
+    --light-red: #FFEBEE;
+
+    --white: #FFFFFF;
+
+    --gray-light: #F8F9FA;
+
+    --gray-medium: #E0E0E0;
+
+    --gray-dark: #37474F;
+
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Clean, subtle shadow */
+
+    --transition: all 0.2s ease-in-out;
+
+    --border-radius: 12px; /* Standard professional radius */
+
+}
+
+
+
+ 
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+ 
+
+/* Layout */
+
+.container {
+
+    max-width: 1000px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+
+}
+
+ 
+
+/* Header & Typography */
+
+h1, h2, h3 {
+
+    color: var(--primary-red);
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+}
+
+ 
+
+h1 {
+
+    text-align: center;
+
+    font-size: 2.5rem;
+
+    letter-spacing: -1px;
+
+}
+
+
+
+hr {
+
+    border: none;
+
+    height: 1px;
+
+    background: var(--gray-medium);
+
+    margin: 30px 0;
+
+}
+
+ 
+
+/* Cards & Sections */
+
+.card {
+
+    background: var(--white);
+
+    padding: 30px;
+
+    border-radius: var(--border-radius);
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 30px;
+
+    border: 1px solid rgba(211, 47, 47, 0.05);
+
+}
+
+
+
+/* login */
+
+.login {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 100vh;
+
+    background: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
+
+}
+
+.login-card {    
+
+    width: 100%;
+
+    max-width: 400px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background: var(--white);
+
+    border-radius: 12px;      
+
+    box-shadow: var(--shadow);
+    margin-top: 30px;
+
+}
+
+.logo-img {
+
+     width: 150px;
+
+    height: auto;
+
+    margin-bottom: 7px;
+
+}
+
+.login-title {
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    margin-bottom: 10px;
+
+    color: var(--gray-dark);
+
+}
+
+.login .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+       
+
+/* Form Styles */
+
+/* =========================================
+   ปรับแต่งส่วนค้นหา (โดยไม่แก้ HTML เดิม)
+========================================= */
+
+/* 1. จัดให้กล่องทั้งหมดเรียงเป็นแนวนอนและอยู่ระดับเดียวกัน */
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end; /* จัดให้ฐานของช่องกรอกและปุ่มเสมอกัน */
+    background: var(--gray-light);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* 2. บังคับ .form-group ที่อยู่ใน .filter-section เท่านั้น */
+.filter-section .form-group {
+    margin-top: 0; /* ล้างค่า margin-top ของเดิมออก */
+    flex: 1; /* สั่งให้กล่องขยายความกว้างเต็มพื้นที่ */
+    min-width: 250px; /* กำหนดความกว้างขั้นต่ำไม่ให้เล็กเกินไป */
+}
+
+/* 3. ปรับขนาดฟอนต์หัวข้อ (Label) */
+.filter-section .form-group label {
+    font-size: 1.05rem;
+    margin-bottom: 5px;
+}
+
+/* 4. 🌟 ปรับให้กรอบ input และ select ใหญ่ขึ้น พร้อมฟอนต์ที่ใหญ่ขึ้น */
+.filter-section .form-group input[type="text"],
+.filter-section .form-group select {
+    padding: 12px 18px; /* เพิ่มความอ้วนให้กรอบ */
+    font-size: 1.1rem; /* ขยายขนาดฟอนต์ด้านใน */
+    width: 100%; /* บังคับให้กว้างเต็มกล่อง */
+    height: 50px; /* ล็อกความสูงให้ Input และ Select เท่ากันเป๊ะ */
+    border: 2px solid var(--gray-medium);
+    border-radius: 8px;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+/* 5. จัดระยะปุ่ม ค้นหา/ล้างค่า ให้พอดีกับกรอบ */
+.filter-section > div[style*="display: flex"] {
+    padding-bottom: 2px; /* ขยับปุ่มให้ลงมาตรงกับขอบล่างของกล่องกรอกข้อมูล */
+}
+
+/* ทำให้ปุ่มมีขนาดความสูงเท่ากับกล่อง */
+.filter-section .btn {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+
+    font-weight: 500;
+
+    color: var(--gray-dark);
+
+    font-size: 0.9rem;
+
+}
+
+ 
+
+input[type="text"],
+
+input[type="password"],
+
+input[type="email"],
+
+input[type="date"],
+
+textarea{
+
+    padding: 12px 40px 12px 16px;
+
+    border: 2px solid var(--gray-medium);
+
+    border-radius: 8px;
+
+    font-size: 1rem;
+
+    transition: var(--transition);
+
+    outline: none;
+
+}
+
+
+
+ 
+
+input:focus, textarea:focus, select:focus {
+
+    border-color: var(--primary-red);
+
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
+
+}
+
+ 
+
+/* Buttons */
+
+.btn {
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+    border: none;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    text-align: center;
+
+}
+
+ 
+
+.btn-primary {
+
+    background-color: var(--primary-red);
+
+    color: var(--white);
+
+}
+
+ 
+
+.btn-primary:hover {
+
+    background-color: var(--dark-red);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+
+}
+
+ 
+
+.btn-outline {
+
+    background-color: transparent;
+
+    border: 2px solid var(--white);
+
+    color: var(--white);
+
+}
+
+ 
+
+.btn-outline:hover {
+
+    background-color: var(--white);
+
+    color: #B71C1C;
+
+}
+
+ 
+
+/* Tables */
+
+.table-container {
+
+    overflow-x: auto;
+
+    border-radius: var(--border-radius);
+
+    box-shadow: var(--shadow);
+
+    background: var(--white);
+
+}
+
+ 
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: var(--white);
+
+}
+
+ 
+
+th {
+
+    background-color: var(--primary-red);
+
+    color: var(--white);
+
+    padding: 16px;
+
+    text-align: left;
+
+    font-weight: 600;
+
+    font-size: 0.9rem;
+
+    text-transform: uppercase;
+
+}
+
+ 
+
+td {
+
+    padding: 16px;
+
+    border-bottom: 1px solid var(--gray-medium);
+
+    font-size: 0.95rem;
+
+}
+
+ 
+
+tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+ 
+
+tr:hover td {
+
+    background-color: var(--light-red);
+
+}
+
+ 
+
+/* Navigation & Header Bar */
+
+.navbar {
+
+    background: var(--primary-red);
+
+    padding: 15px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+ 
+
+.nav-logo{
+
+    width: 90px;
+
+    height: auto;
+
+    margin-left: -22px;
+
+    margin-right: 5px;
+
+    margin-top: -8px;
+
+    margin-bottom: -8px;
+
+
+
+}
+
+.nav-name {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+
+.nav-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    font-weight: 500;
+
+    color: white;
+
+    font-size: 1.2rem;
+
+}
+
+
+
+.is {
+
+    margin: 0;
+
+    font-size: 0.85rem;
+
+    color: whitesmoke; /* สั่งให้ดึงสีมาจาก .nav-text */
+
+    opacity: 0.8;
+
+}
+
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+
+}
+
+ 
+
+/* Badges */
+
+.badge {
+
+    padding: 4px 12px;
+
+    border-radius: 20px;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    display: inline-block;
+
+}
+
+ 
+
+.badge-pending { background: #FFF9C4; color: #FBC02D; }
+
+.badge-approved { background: #C8E6C9; color: #388E3C; }
+
+.badge-rejected { background: #FFCDD2; color: #D32F2F; }
+
+ 
+
+/* Utilities */
+
+.text-center { text-align: center; }
+
+.mt-4 { margin-top: 1.5rem; }
+
+.mb-4 { margin-bottom: 1.5rem; }
+
+/* Clean Footer */
+
+.friendly-footer {
+
+    margin-top: 50px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-top: 1px solid var(--gray-medium);
+
+    color: var(--gray-dark);
+
+    font-size: 0.85rem;
+
+}
+
+
+
+/* FIX ฟอนต์ทั้งเว็บ */
+
+*,
+
+*::before,
+
+*::after {
+
+  font-family: "Kanit", sans-serif;
+
+}
+
+
+
+/* FIX form elements */
+
+input,
+
+button,
+
+textarea,
+
+select {
+
+  font-family: "Kanit", sans-serif;
+
+}
+
+
+
+/* FIX placeholder */
+
+::placeholder {
+
+  font-family: "Kanit", sans-serif;
+
+}
+
+/* =========================================
+   หน้าแสดงผลการนิเทศ (Supervision Detail View)
+========================================= */
+
+/* พื้นหลังหน้า */
+.sv-body-bg {
+    background-color: var(--gray-light, #f4f6f9);
+}
+
+/* คอนเทนเนอร์หลัก */
+.sv-main-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* หัวข้อหน้า */
+.sv-header-title {
+    margin-bottom: 20px;
+    color: var(--gray-dark);
+}
+
+.sv-header-title h2 {
+    font-weight: 600;
+}
+
+/* การ์ดข้อมูล (มีเส้นขอบบนสีแดง) */
+.sv-detail-card {
+    background: var(--white, #ffffff);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--primary-red, #d32f2f); /* โทนสีแดงหลัก */
+}
+
+/* จัดกลุ่มข้อมูลส่วนตัว 2 คอลัมน์ */
+.sv-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.sv-info-box label {
+    font-size: 0.9rem;
+    color: var(--gray-medium, #6c757d);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.sv-info-box p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--gray-dark, #333);
+    margin: 0;
+}
+
+/* เส้นกั้น */
+.sv-divider {
+    border: 0;
+    border-top: 1px solid #eaeaea;
+    margin: 20px 0;
+}
+
+/* ส่วนแสดงผลการประเมิน */
+.sv-result-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.sv-result-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sv-label {
+    font-weight: 600;
+    color: var(--gray-dark);
+    font-size: 1.05rem;
+}
+
+.sv-date-text {
+    font-size: 1.05rem;
+    color: #444;
+}
+
+/* ป้ายกำกับผ่าน / ไม่ผ่าน */
+.sv-badge {
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.sv-badge-pass {
+    background-color: #e8f5e9;
+    color: #28a745;
+    border: 1px solid #c8e6c9;
+}
+
+.sv-badge-fail {
+    background-color: #ffebee;
+    color: #dc3545;
+    border: 1px solid #ffcdd2;
+}
+
+/* กล่องคอมเมนต์ (มีแถบสีซ้ายมือ) */
+.sv-comment-wrapper {
+    margin-bottom: 30px;
+}
+
+.sv-comment-box {
+    margin-top: 10px;
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-red, #d32f2f);
+    color: #444;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* แถบปุ่มด้านล่าง */
+.sv-action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+}
+
+.sv-btn-back {
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.sv-btn-file {
+    padding: 10px 20px;
+    font-weight: 500;
+    background-color: #0056b3; /* สีน้ำเงินสำหรับไฟล์แนบ */
+}
+.sv-btn-file:hover {
+    background-color: #004494;
+}
+
+/* =========================================
+   การจัดรูปแบบหน้าแก้ไขข้อมูล (Edit Page)
+========================================= */
+
+/* คอนเทนเนอร์หลักของหน้าแก้ไข */
+.container-edit {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ปรับการ์ดแก้ไขให้ดูเด่นและมีพื้นที่มากขึ้น */
+.card-edit {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+    border-top: 5px solid var(--primary-red, #d32f2f);
+}
+
+.card-edit h2 {
+    margin-bottom: 30px;
+    color: var(--gray-dark);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* ปรับกลุ่มฟอร์มให้ดูใหญ่และมีระยะห่างที่พอดี */
+.container-edit .form-group {
+    margin-bottom: 25px; /* เพิ่มระยะห่างระหว่างแต่ละฟิลด์ */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-edit .form-group label {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--gray-dark);
+}
+
+/* 🌟 ปรับขนาดของ Input, Select, Textarea ให้ใหญ่ขึ้น */
+.container-edit input[type="text"],
+.container-edit input[type="date"],
+.container-edit textarea {
+    padding: 15px 20px; /* ขยายขนาดกล่องให้กว้างและสูงขึ้น */
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* ปรับ Textarea ให้สวยงาม */
+.container-edit textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ทำให้ Input สวยขึ้นตอนกดพิมพ์ */
+.container-edit input:focus,
+.container-edit textarea:focus {
+    border-color: var(--primary-red);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
+}
+
+/* ปรับปุ่มให้ใหญ่และชัดเจน */
+.container-edit .btn-primary {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* ปรับ Grid ให้เป็นระเบียบ */
+.container-edit .card-edit > form > div[style*="grid"] {
+    gap: 25px; /* เพิ่มช่องว่างระหว่าง Grid */
+}
+
+/* จัดการกล่องข้อมูลนิสิตให้อ่านง่าย */
+.student-info-card {
+    background: #fff;
+    border-left: 5px solid var(--primary-red); /* ใส่แถบสีแดงให้เข้ากับธีม */
+    margin-bottom: 20px;
+}
+
+.student-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.student-info-grid p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--gray-dark);
+}
+
+.container-edit .badge-request {
+    background-color: var(--primary-red);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* เพิ่มระยะห่างให้ฟอร์มดูโปร่งขึ้น */
+.container-edit .form-group {
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   การจัดรูปแบบหน้าลงทะเบียน (Register Page)
+   ใช้ .container-register เป็นหลัก
+========================================= */
+
+.container-register {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* ปรับแต่ง Card ให้ดูสะอาดตา */
+.container-register .card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    border-top: 5px solid var(--primary-red, #d32f2f);
+}
+
+/* ส่วนหัวข้อภายใน Card */
+.container-register h2, 
+.container-register h3 {
+    margin-top: 0;
+    color: var(--gray-dark, #333);
+}
+
+/* จัดส่วนแสดงข้อมูลนิสิต */
+.container-register label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--gray-medium, #777);
+    margin-bottom: 5px;
+}
+
+/* ปรับฟอร์มให้ใหญ่ขึ้น */
+.container-register .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+/* 🌟 ขยายขนาด Input, Select และ Textarea ให้กว้างและสูง */
+.container-register input[type="text"],
+.container-register input[type="date"],
+.container-register textarea {
+    padding: 14px 18px;
+    font-size: 1.05rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.container-register textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* เอฟเฟกต์ตอนกด Focus */
+.container-register input:focus,
+.container-register textarea:focus {
+    border-color: var(--primary-red);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
+}
+
+/* ปรับปุ่มให้เด่นชัดและกดง่าย */
+.container-register .btn-primary {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.container-register .btn-primary:hover {
+    background-color: #b71c1c;
+}
+
+/* จัดระยะห่างของ Grid ให้ดูโปร่ง */
+.container-register [style*="grid"] {
+    gap: 25px !important;
+}
+
+/* จัดการกล่องใหญ่ container-sv ให้เลือกอยู่ตรงกลางหน้าจอ */
+.container-sv {
+    max-width: 1000px; /* ความกว้างสูงสุดของกล่อง */
+    margin: 40px auto; /* จัดกึ่งกลางหน้าจอ (บน-ล่าง 40px, ซ้าย-ขวา auto) */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดเนื้อหาภายใน (เช่น table หรือ card) ให้อยู่ตรงกลาง */
+}
+
+/* จัดตารางภายใน container-sv ให้อยู่ตรงกลาง */
+.container-sv table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/* ปรับแต่งหัวตารางและช่องว่าง (เพื่อให้ดูเป็นระเบียบเมื่ออยู่ตรงกลาง) */
+.container-sv th, .container-sv td {
+    padding: 15px;
+    text-align: center; /* จัดข้อความในตารางให้อยู่ตรงกลางด้วย */
+    border-bottom: 1px solid var(--gray-medium);
+}

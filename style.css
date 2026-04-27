@@ -1,0 +1,299 @@
+body {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+}
+
+:root {
+    --primary-red: #D32F2F;
+    --dark-red: #B71C1C;
+    --light-red: #FFEBEE;
+    --white: #FFFFFF;
+    --gray-light: #F8F9FA;
+    --gray-medium: #E0E0E0;
+    --gray-dark: #37474F;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Clean, subtle shadow */
+    --transition: all 0.2s ease-in-out;
+    --border-radius: 12px; /* Standard professional radius */
+}
+
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+/* Layout */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+ 
+/* Header & Typography */
+h1, h2, h3 {
+    color: var(--primary-red);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+ 
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+}
+ 
+hr {
+    border: none;
+    height: 1px;
+    background: var(--gray-medium);
+    margin: 30px 0;
+}
+ 
+/* Cards & Sections */
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    border: 1px solid rgba(211, 47, 47, 0.05);
+}
+
+/* login */
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
+}
+.login-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+.logo-img {
+     width: 200px;
+    height: auto;
+    margin-bottom: -17px;
+}
+.login-title {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--gray-dark);
+}
+        
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+ 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+ 
+label {
+    font-weight: 500;
+    color: var(--gray-dark);
+    font-size: 0.9rem;
+}
+ 
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+textarea{
+    padding: 12px 40px 12px 16px;
+    border: 2px solid var(--gray-medium);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+    outline: none;
+}
+
+ 
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
+}
+ 
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+ 
+.btn-primary {
+    background-color: var(--primary-red);
+    color: var(--white);
+}
+ 
+.btn-primary:hover {
+    background-color: var(--dark-red);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+ 
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-red);
+    color: var(--primary-red);
+}
+ 
+.btn-outline:hover {
+    background-color: var(--light-red);
+}
+ 
+/* Tables */
+.table-container {
+    overflow-x: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    background: var(--white);
+}
+ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+ 
+th {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+ 
+td {
+    padding: 16px;
+    border-bottom: 1px solid var(--gray-medium);
+    font-size: 0.95rem;
+}
+ 
+tr:last-child td {
+    border-bottom: none;
+}
+ 
+tr:hover td {
+    background-color: var(--light-red);
+}
+ 
+/* Navigation & Header Bar */
+.navbar {
+    background: var(--primary-red);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+ 
+.nav-logo{
+    width: 90px;
+    height: auto;
+    margin-left: -22px;
+    margin-right: 5px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+
+}
+.nav-name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-text {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: var(--primary-red);
+    font-size: 1.2rem;
+}
+
+.is {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--gray-dark);
+    opacity: 0.7;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+ 
+/* Badges */
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+ 
+.badge-pending { background: #FFF9C4; color: #FBC02D; }
+.badge-approved { background: #C8E6C9; color: #388E3C; }
+.badge-rejected { background: #FFCDD2; color: #D32F2F; }
+ 
+/* Utilities */
+.text-center { text-align: center; }
+.mt-4 { margin-top: 1.5rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+/* Clean Footer */
+.friendly-footer {
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid var(--gray-medium);
+    color: var(--gray-dark);
+    font-size: 0.85rem;
+}
+
+/* FIX ฟอนต์ทั้งเว็บ */
+*,
+*::before,
+*::after {
+  font-family: "Kanit", sans-serif;
+}
+
+/* FIX form elements */
+input,
+button,
+textarea,
+select {
+  font-family: "Kanit", sans-serif;
+}
+
+/* FIX placeholder */
+::placeholder {
+  font-family: "Kanit", sans-serif;
+}
+ 

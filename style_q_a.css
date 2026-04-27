@@ -1,0 +1,227 @@
+input, textarea, button {
+    font-family: 'Srinakharinwirot', sans-serif;
+    color: #333;
+}
+
+body {
+    font-family: 'Srinakharinwirot', sans-serif;
+    background: #fdfdfd;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* ส่วนหัวภายในกล่อง */
+.header-box {
+    align-items: center;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.logo-circle {
+    width: 100px;
+    height: 60px;
+    background: #DA2128;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 38px;
+    flex-shrink: 0;   /* ป้องกันโลโก้ถูกบีบจนเบี้ยว */
+    border: 4px solid #fce8e9;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 4px 10px rgba(218, 33, 40, 0.1);
+    line-height: 60px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
+    border-top: 28px solid #DA2128; 
+    padding-top: 30px;
+}
+
+textarea[name="message"], 
+.reply-form textarea {
+    font-family: 'Srinakharinwirot', sans-serif;
+    font-size: 16px;      
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    min-height: 50px;    /* กำหนดความสูงเริ่มต้นของช่องถาม */
+    resize: none;
+    box-sizing: border-box; /* ป้องกันกล่องล้นขอบ */
+    transition: 0.3s;       /* แอนิเมชั่นเวลาเปลี่ยนสี */
+    outline: none;
+}
+
+textarea[name="message"]:focus,
+.reply-form textarea:focus {
+    border-color: #DA2128;
+    box-shadow: 0 0 5px rgba(158, 26, 26, 0.2);
+}
+
+/* ปรับ Placeholder เฉพาะช่องถาม */
+textarea[name="message"]::placeholder {
+    font-size: 16px;
+    color: #888;
+}
+
+/* เฉพาะปุ่ม "ส่งข้อความ" */
+button[name="send"] {
+    width: auto;
+    padding: 12px 22px;
+    font-size: 17px;
+    display: block;
+    margin: 15px 0 0 0; 
+    box-shadow: 0 4px 6px rgba(218, 33, 40, 0.2);
+}
+
+/* ปรับแต่งปุ่มกด */
+button {
+    background-color: #DA2128;
+    color: white;
+    border: none;
+    padding: 9px 19px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 15px;
+    box-shadow: 0 4px 10px rgba(218,33,40,0.3);
+}
+
+button:hover {
+    background-color: #7a1414; /* สีเข้มขึ้นเวลาเอาเมาส์วาง */
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(1px); /* เวลากดปุ่มจะยุบลงนิดนึง */
+    box-shadow: none;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #dedede;
+    margin: 30px 0;
+}
+
+/* ส่วนของกล่องข้อความ Q&A */
+.box {
+    border: 1px solid #e3e3e3;
+    padding: 20px;
+    margin-top: 5px;
+    border-radius: 12px;
+    background: white;
+    position: relative;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.04);
+    word-wrap: break-word;       
+    overflow-wrap: break-word;   
+    border-left: 5px solid #DA2128;
+}
+
+.box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.box b {
+    color: #DA2128;
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.box b i {
+    font-size: 1.1rem;   /* ปรับขนาดไอคอนให้ใหญ่กว่าตัวหนังสือนิดหน่อย */
+    vertical-align: middle;
+}
+
+/* ส่วนของการตอบกลับจากผู้ตอบ */
+.reply {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff5f5; 
+    color: #a33;
+    border-left: 5px solid #a33;
+    font-size: 0.95em;
+    word-wrap: break-word;       /* ตัดคำที่ยาวเกินไปให้ขึ้นบรรทัดใหม่ */
+    overflow-wrap: break-word;   /* รองรับเบราว์เซอร์สมัยใหม่ */
+    
+}
+
+.reply-label {
+    color: #a33;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.reply-form {
+    display: flex;
+    align-items: flex-end; /* ให้ปุ่มวางอยู่ระดับเดียวกับบรรทัดสุดท้าย */
+    gap: 8px;              /* ลดระยะห่างระหว่างช่องพิมพ์กับปุ่ม */
+    margin-top: 10px;
+}
+
+/* ปรับขนาด Textarea สำหรับการตอบ */
+.reply-form textarea {
+    flex-grow: 1;
+    min-height: 34px;      
+    max-height: 100px;     /* จำกัดความสูงสูงสุด */
+    padding: 6px 10px;     
+    font-size: 14px;       
+    line-height: 1.4;      /* ปรับระยะบรรทัดให้พอดี */
+    border: 1px solid #ddd;
+    border-radius: 6px;    
+}
+
+/* ปรับปุ่ม "ตอบ" ให้เล็กลง */
+.reply-form button[name="reply_btn"] {
+    height: 34px;          /* ให้ความสูงเท่ากับช่อง textarea */
+    padding: 0 15px;       
+    font-size: 15px;       
+    border-radius: 6px;
+    margin: 0;             
+    white-space: nowrap;
+}
+
+/* ปรับ Placeholder เฉพาะช่องตอบ */
+.reply-form textarea::placeholder {
+    font-size: 14px;
+    color: #999;
+}
+
+.scroll-box {
+    max-height: 300px;   
+    overflow-y: auto;    /* เลื่อนลงได้ */
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
+    
+}
+
+.scroll-box::-webkit-scrollbar {
+    width: 7px;
+}
+
+.scroll-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+    background: #DA2128; 
+    border-radius: 10px;
+}
+
