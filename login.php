@@ -8,7 +8,7 @@ if (isset($_POST['login'])) {
     $username = $_POST['Username'];
     $password = $_POST['Password'];
 
-    // เช็คฝั่ง Student
+    // เช็คLogin Student
     $stmt = $conn->prepare("SELECT * FROM student WHERE student_id = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -21,7 +21,7 @@ if (isset($_POST['login'])) {
         exit();
     } 
 
-    // เช็คฝั่ง Staff
+    // เช็คLogin Staff
     $stmt2 = $conn->prepare("SELECT * FROM staff WHERE username = ?");
     $stmt2->bind_param("s", $username);
     $stmt2->execute();
@@ -38,6 +38,7 @@ if (isset($_POST['login'])) {
 }
 ?>
 
+<!-- หน้าhtml -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -48,6 +49,7 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="./style_php.css">
 </head>
 <body>
+    <!-- ส่วนกล่อง Login -->
 <div class="login">
     <div class="login-card">
         <img src="img/Logo_of_Srinakharinwirot_University.svg.png" alt="logo" class="logo-img">

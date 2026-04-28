@@ -68,7 +68,7 @@ $data = $_POST;
     <link rel="stylesheet" href="./style_php.css">
 </head>
 <body>
-
+<!-- navbar -->
     <nav class="navbar">
         <div class="nav-name">
             <img src="img\Srinakharinwirot_Logo_TH_White.png" alt="logo" class="nav-logo">
@@ -78,7 +78,7 @@ $data = $_POST;
             <button onclick="history.back()" class="btn btn-outline">ย้อนกลับ</button>
         </div>
     </nav>
-
+<!-- ส่วนที่นิสิตจะต้องตรวจสอบข้อมูลอีกครั้งก่อนกดยืนยัน -->
     <div class="container" style="max-width: 700px;">
         <div class="card">
             <h2 class="text-center">ตรวจสอบข้อมูลอีกครั้ง</h2>
@@ -130,7 +130,7 @@ $data = $_POST;
                     </div>
                 </div>
             </div>
-
+            <!-- นำข้อมูลที่กรอกมาแสดงผลก่อนกดยืนยัน -->
             <form method="post" style="margin-top: 30px;">
                 <input type="hidden" name="company_id" value="<?= htmlspecialchars($data['company_id']) ?>">
                 <input type="hidden" name="company_name" value="<?= htmlspecialchars($data['company_name']) ?>">
@@ -148,7 +148,7 @@ $data = $_POST;
             </form>
         </div>
     </div>
-
+<!-- footer -->
     <footer class="friendly-footer">
         <p>© 2026 ระบบจัดการข้อมูลการฝึกงาน | คณะมนุษยศาสตร์ สาขาวิชาสารสนเทศศึกษา มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
     </footer>

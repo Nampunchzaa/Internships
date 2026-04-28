@@ -69,7 +69,7 @@ if (!$row) {
     <link rel="stylesheet" href="./style_php.css">
 </head>
 <body>
-
+<!-- navbar -->
 <nav class="navbar">
     <div class="nav-name">
             <img src="img\Srinakharinwirot_Logo_TH_White.png" alt="logo" class="nav-logo">
@@ -120,7 +120,8 @@ if (!$row) {
         <!-- สถานะ -->
         <div style="text-align:center;">
             <h3>สถานะปัจจุบัน</h3>
-
+            
+            <!-- แสดงสถานะตามค่า status -->
             <?php
             $status_class = '';
             if ($row['status'] == 1) $status_class = 'badge-pending';
@@ -135,7 +136,7 @@ if (!$row) {
 
     </div>
 </div>
-
+<!-- footer -->
 <footer class="friendly-footer">
     <p>© 2026 ระบบจัดการข้อมูลการฝึกงาน | คณะมนุษยศาสตร์ สาขาวิชาสารสนเทศศึกษา มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
 </footer>

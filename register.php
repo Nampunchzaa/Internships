@@ -46,7 +46,7 @@ if ($stmt->execute()) {
 }
 }
 ?>
-
+<!-- ส่วนหน้า html -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -57,7 +57,7 @@ if ($stmt->execute()) {
     <link rel="stylesheet" href="./style_php.css">
 </head>
 <body>
-
+<!-- navbar -->
     <nav class="navbar">
         <div class="nav-name">
             <img src="img\Srinakharinwirot_Logo_TH_White.png" alt="logo" class="nav-logo">
@@ -67,7 +67,7 @@ if ($stmt->execute()) {
             <a href="view_status.php" class="btn btn-outline">ย้อนกลับ</a>
         </div>
     </nav>
-
+<!-- กล่องที่นิสิตจะต้องกรอกข้อมูล -->
     <div class="container-register">
         <div class="card">
             <h3>ข้อมูลนิสิต</h3>
@@ -82,7 +82,7 @@ if ($stmt->execute()) {
                 </div>
             </div>
         </div>
-
+<!-- ส่วนนิสิตกรอกข้อมูลที่ฝึกงาน -->
         <div class="card">
             <h2>รายละเอียดการฝึกงาน</h2>
             <p style="color: var(--gray-dark); margin-bottom: 20px; font-size: 0.9rem;">กรุณากรอกข้อมูลบริษัทและระยะเวลาการฝึกงานให้ครบถ้วน</p>
@@ -131,7 +131,7 @@ if ($stmt->execute()) {
             </form>
         </div>
     </div>
-
+<!-- footer -->
     <footer class="friendly-footer">
         <p>© 2026 ระบบจัดการข้อมูลการฝึกงาน <br> คณะมนุษยศาสตร์ สาขาวิชาสารสนเทศศึกษา มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
     </footer>

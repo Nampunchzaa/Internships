@@ -2,7 +2,7 @@
 session_start();
 include('db_connect.php');
 
-// 1. ตรวจสอบสิทธิ์
+// ตรวจสอบสิทธิ์การ Login
 if (!isset($_SESSION['student_id']) || !isset($_GET['id'])) {
     header("Location: view_status.php");
     exit();
@@ -11,7 +11,7 @@ if (!isset($_SESSION['student_id']) || !isset($_GET['id'])) {
 $student_id_session = $_SESSION['student_id'];
 $request_id = $_GET['id'];
 
-// 2. ดึงข้อมูลเดิมมาแสดง (ต้องเป็น status 9 และเป็นของตนเองเท่านั้น)
+// ดึงข้อมูล internship_request ที่สถานะ = 9
 $sql_old = "SELECT ir.*, c.company_name, c.address, c.contact_name 
             FROM internship_request ir 
             LEFT JOIN company c ON ir.company_id = c.company_id 
@@ -26,13 +26,13 @@ if (!$old_data) {
     exit();
 }
 
-// 3. ดึงข้อมูลนิสิตเพื่อแสดงชื่อ
+// ดึงข้อมูลนิสิต
 $stmt_user = $conn->prepare("SELECT * FROM student WHERE student_id = ?");
 $stmt_user->bind_param("s", $student_id_session);
 $stmt_user->execute();
 $student = $stmt_user->get_result()->fetch_assoc();
 
-// 4. บันทึกข้อมูลเมื่อ Submit
+// บันทึกข้อมูลเมื่อ Submit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $company_name = $_POST['company_name'];
     $job_position = $_POST['job_position'];
