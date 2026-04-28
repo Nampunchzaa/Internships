@@ -111,3 +111,6 @@ CREATE TABLE messages (
     message TEXT,
     reply TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+
+ALTER TABLE company
+ADD COLUMN job_position VARCHAR(150) AFTER company_name;
