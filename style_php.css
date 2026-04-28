@@ -927,7 +927,7 @@ select {
 .container-register label {
     display: block;
     font-size: 0.9rem;
-    color: var(--gray-medium, #777);
+    color: (black);
     margin-bottom: 5px;
 }
 

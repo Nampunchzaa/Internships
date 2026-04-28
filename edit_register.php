@@ -45,8 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->begin_transaction();
     try {
         // Update ข้อมูลบริษัท
-        $upd_com = $conn->prepare("UPDATE company SET company_name = ?, address = ?, contact_name = ? WHERE company_id = ?");
-        $upd_com->bind_param("sssss", $company_name, $job_position,$address, $contact_name, $company_id);
+        $upd_com = $conn->prepare("UPDATE company SET company_name = ?, job_position = ?, address = ?, contact_name = ? WHERE company_id = ?");
+        $upd_com->bind_param("sssss", $company_name, $job_position, $address, $contact_name, $company_id);
         $upd_com->execute();
 
         // Update วันที่ และเปลี่ยนสถานะกลับเป็น 1 (รอตรวจสอบ)

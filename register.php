@@ -74,7 +74,7 @@ if ($stmt->execute()) {
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
                 <div>
                     <label>รหัสนิสิต</label>
-                    <p style="font-weight: 600;"><?= $student['student_id'] ?></p>
+                    <p style="font-weight: 600;" ><?= $student['student_id'] ?></p>
                 </div>
                 <div>
                     <label>ชื่อ-นามสกุล</label>
@@ -131,7 +131,7 @@ if ($stmt->execute()) {
             </form>
         </div>
     </div>
-    
+
 <!-- footer -->
     <footer class="friendly-footer">
         <p>© 2026 ระบบจัดการข้อมูลการฝึกงาน <br> คณะมนุษยศาสตร์ สาขาวิชาสารสนเทศศึกษา มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
