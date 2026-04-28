@@ -90,37 +90,37 @@ if ($stmt->execute()) {
             <form method="post" action="review_register.php">
                 <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px;">
                     <div class="form-group">
-                        <label for="company_id">รหัสบริษัท / เลขนิติบุคคล</label>
+                        <label for="company_id" style="color: var(--gray-dark);">รหัสบริษัท / เลขนิติบุคคล</label>
                         <input type="text" name="company_id" id="company_id" placeholder="ระบุรหัสบริษัท" required>
                     </div>
                     <div class="form-group">
-                        <label for="company_name">ชื่อบริษัท / สถานประกอบการ</label>
+                        <label for="company_name" style="color: var(--gray-dark);">ชื่อบริษัท / สถานประกอบการ</label>
                         <input type="text" name="company_name" id="company_name" placeholder="ระบุชื่อบริษัท" required>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label for="job_position">ตำแหน่งการทำงาน</label>
+                    <label for="job_position" style="color: var(--gray-dark);">ตำแหน่งการทำงาน</label>
                     <input type="text" name="job_position" id="job_position" placeholder="ระบุตำแหน่งที่นิสิตเข้าฝึกงาน" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="address">ที่อยู่บริษัท</label>
+                    <label for="address" style="color: var(--gray-dark);">ที่อยู่บริษัท</label>
                     <textarea name="address" id="address" rows="3" placeholder="เลขที่, ถนน, แขวง/ตำบล, เขต/อำเภอ, จังหวัด"></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label for="contact_name">ชื่อผู้ติดต่อ / ผู้ควบคุมดูแล</label>
+                    <label for="contact_name" style="color: var(--gray-dark);">ชื่อผู้ติดต่อ / ผู้ควบคุมดูแล</label>
                     <input type="text" name="contact_name" id="contact_name" placeholder="ระบุชื่อผู้ติดต่อ">
                 </div>
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                     <div class="form-group">
-                        <label for="start_date">วันที่เริ่มฝึกงาน</label>
+                        <label for="start_date" style="color: var(--gray-dark);">วันที่เริ่มฝึกงาน</label>
                         <input type="date" name="start_date" id="start_date" required>
                     </div>
                     <div class="form-group">
-                        <label for="end_date">วันที่สิ้นสุดการฝึกงาน</label>
+                        <label for="end_date" style="color: var(--gray-dark);">วันที่สิ้นสุดการฝึกงาน</label>
                         <input type="date" name="end_date" id="end_date" required>
                     </div>
                 </div>
