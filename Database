@@ -106,3 +106,10 @@ CREATE TABLE supervision (
     FOREIGN KEY (request_id) REFERENCES internship_request(request_id),
     FOREIGN KEY (staff_id) REFERENCES staff(staff_id));
  
+CREATE TABLE messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    message TEXT,
+    reply TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+ 
