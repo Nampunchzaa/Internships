@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="./style_php.css">
 </head>
 <body>
-
+<!-- navbar -->
 <nav class="navbar">
         <div class="nav-name">
             <img src="img\Srinakharinwirot_Logo_TH_White.png" alt="logo" class="nav-logo">
@@ -79,6 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="view_all.php" class="btn btn-outline">ย้อนกลับ</a>
         </div>
     </nav>
+    <!-- บันทึกผลการนิเทศ -->
 <div class="container-sv">
     <div class="card" style="width: 100%; max-width: 800px;"> 
         <h2 class="text-center" style="margin-bottom: 20px;">บันทึกผลการนิเทศการฝึกงาน</h2>
@@ -87,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p style="margin-bottom: 5px;"><strong>นิสิต:</strong> <?= htmlspecialchars($data['fullname'] ?? '-') ?></p>
             <p style="margin-bottom: 0;"><strong>บริษัท:</strong> <?= htmlspecialchars($data['company_name'] ?? '-') ?></p>
         </div>
-        
+        <!-- ฟอร์มบันทึกผลการนิเทศ -->
         <form method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label>วันที่นิเทศ:</label>

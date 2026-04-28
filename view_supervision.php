@@ -45,6 +45,7 @@ $data = $result->fetch_assoc();
 </head>
 <body class="sv-body-bg">
 
+<!-- navbar -->
 <nav class="navbar">
     <div class="nav-name">
             <img src="img\Srinakharinwirot_Logo_TH_White.png" alt="logo" class="nav-logo">
@@ -62,7 +63,7 @@ $data = $result->fetch_assoc();
     <a href="<?= $back_link ?>" class="btn btn-outline">ย้อนกลับ</a>
 </div>
 </nav>
-    
+    <!-- ผลการนิเทศ -->
 <div class="sv-main-container">
     <div class="sv-header-title">
         <h2>ผลการนิเทศสหกิจศึกษา</h2>
@@ -87,7 +88,7 @@ $data = $result->fetch_assoc();
                 <p><?= htmlspecialchars($data['teacher_name']) ?></p>
             </div>
         </div>
-
+<!-- ผลการนิเทศ -->
         <hr class="sv-divider">
 
         <div class="sv-result-section">
@@ -104,14 +105,14 @@ $data = $result->fetch_assoc();
                 <?php endif; ?>
             </div>
         </div>
-
+        <!-- ความคิดเห็นของอาจารย์ -->
         <div class="sv-comment-wrapper">
             <label class="sv-label">รายละเอียด / ความคิดเห็นเพิ่มเติม:</label>
             <div class="sv-comment-box">
                 <?= nl2br(htmlspecialchars($data['result_detail'])) ?>
             </div>
         </div>
-
+        <!-- อาจารย์สามารถเพิ่มไฟล์เอกสารได้ -->
         <div class="sv-action-bar">
 
             <?php if (!empty($data['file_path'])): ?>

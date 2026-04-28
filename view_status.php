@@ -54,6 +54,7 @@ while ($row = $result->fetch_assoc()) {
     </style>
 </head>
 <body>
+    <!-- navbar -->
     <nav class="navbar">
         <div class="nav-name">
             <img src="img\Srinakharinwirot_Logo_TH_White.png" alt="logo" class="nav-logo">
@@ -64,7 +65,7 @@ while ($row = $result->fetch_assoc()) {
             <a href="login.php" class="btn btn-outline">ออกจากระบบ</a>
         </div>
     </nav>
-
+    <!-- ข้อมูลส่วนตัวนิสิต -->
     <div class="container">
         <div class="card">
             <h2>ข้อมูลส่วนตัวนิสิต</h2>
@@ -75,12 +76,12 @@ while ($row = $result->fetch_assoc()) {
                 <div><label>อีเมล</label><p style="font-weight: 600;"><?= $student['email'] ?></p></div>
             </div>
         </div>
-
+        <!-- ตรวจสอบสถานะการฝึกงาน -->
         <div class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
             <h2>ตรวจสอบสถานะการฝึกงาน</h2>
             <a href="register.php" class="btn btn-primary">+ กรอกข้อมูลการฝึกงาน</a>
         </div>
-
+        <!-- แจ้งเตือนหากต้องแก้ไขข้อมูล -->
         <?php foreach ($requests as $req): ?>
             <?php if ($req['status'] == 9): ?>
                 <div class="alert-remark">
@@ -89,7 +90,7 @@ while ($row = $result->fetch_assoc()) {
                 </div>
             <?php endif; ?>
         <?php endforeach; ?>
-
+        <!-- ตารางแสดงสถานะการฝึกงาน -->
         <div class="table-container">
             <table>
                 <thead>
@@ -104,6 +105,7 @@ while ($row = $result->fetch_assoc()) {
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- รายการคำร้อง -->
                     <?php if (count($requests) > 0): ?>
                         <?php foreach ($requests as $row): 
                             $status_class = '';

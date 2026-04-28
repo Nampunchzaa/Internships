@@ -72,7 +72,7 @@ $result = mysqli_query($conn, $sql);
     </style>
 </head>
 <body>
-
+    <!-- navbar -->
     <nav class="navbar">
         <div class="nav-name">
             <img src="img\Srinakharinwirot_Logo_TH_White.png" alt="logo" class="nav-logo">
@@ -97,7 +97,7 @@ $result = mysqli_query($conn, $sql);
                         <label>ค้นหาข้อมูล</label>
                         <input type="text" name="search" value="<?= htmlspecialchars($search) ?>" placeholder="ชื่อนิสิต, รหัส, หรือบริษัท">
                     </div>
-                    
+                    <!-- ตัวเลือกการเรียงลำดับ -->
                     <div class="form-group">
                         <label>เรียงลำดับตาม</label>
                         <select name="sort_by" onchange="this.form.submit()">
@@ -115,7 +115,7 @@ $result = mysqli_query($conn, $sql);
                     </div>
                 </div>
             </form>
-
+            <!-- ตารางแสดงรายการคำขอ -->
             <div class="table-container" style="overflow-x: auto;">
                 <table>
                     <thead>
@@ -127,12 +127,13 @@ $result = mysqli_query($conn, $sql);
                             <th>บริษัท</th>
                             <th>วันที่ยื่น</th>
                             <th>สถานะ</th>
-                            <th>รายละเอียด</th> <!-- ✅ เพิ่ม -->
+                            <th>รายละเอียด</th>
                             <th>จัดการสถานะ</th>
                             <th>นิเทศสหกิจศึกษา</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- รายการคำขอ -->
                         <?php if(mysqli_num_rows($result) > 0): ?>
                             <?php while($row = mysqli_fetch_assoc($result)): 
                                 $status_class = '';
@@ -153,7 +154,7 @@ $result = mysqli_query($conn, $sql);
                                     </span>
                                 </td>
 
-                                <!-- ✅ ปุ่มรายละเอียด -->
+                                <!-- ปุ่มรายละเอียด -->
                                 <td style="text-align: center;">
                                     <a href="status_all.php?id=<?= $row['request_id'] ?>" 
                                        class="btn btn-primary"
@@ -171,9 +172,10 @@ $result = mysqli_query($conn, $sql);
                                 </td>
 
                                 <td>
+                                    <!-- ปุ่มบันทึกผลการนิเทศ -->
                                     <div class="btn-group-vertical">
                                         <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'teacher'): ?>
-                                            
+                                            <!-- ฟอร์มบันทึกผลการนิเทศ -->
                                             <?php if ($row['status'] == 3 || $row['status'] == 4): ?>
                                             <a href="supervision.php?id=<?= $row['request_id'] ?>" class="btn btn-success" style="padding: 6px 12px; font-size: 0.8rem; background-color: #28a745; color: white; border-radius: 4px; text-decoration: none; text-align: center;">
                                                 บันทึกผล
@@ -207,7 +209,7 @@ $result = mysqli_query($conn, $sql);
             </div>
         </div>
     </div>
-
+    <!-- footer -->
     <footer class="friendly-footer">
         <p>© 2026 ระบบจัดการข้อมูลการฝึกงาน | ส่วนงานเจ้าหน้าที่</p>
     </footer>

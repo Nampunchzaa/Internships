@@ -121,6 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </style>
 </head>
 <body>
+    <!-- navbar -->
     <nav class="navbar">
         <div class="nav-name">
             <img src="img\Srinakharinwirot_Logo_TH_White.png" alt="logo" class="nav-logo">
@@ -138,6 +139,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <a href="<?= $back_link ?>" class="btn btn-outline">ย้อนกลับ</a>
     </div>
     </nav>
+    <!-- ส่วนจัดเก็บข้อมูล -->
     <div class="container" style="max-width: 800px; margin-top: 50px;">
         <div class="card">
             <h2 class="mb-4">จัดการสถานะคำขอ #<?= htmlspecialchars($data['request_id']) ?></h2>
@@ -159,7 +161,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <p><strong>ที่อยู่:</strong> <?= htmlspecialchars($data['address'] ?: '-') ?></p>
                 </div>
             </div>
-
+            <!-- ฟอร์มปรับเปลี่ยนสถานะ -->
             <form method="POST">
                 <div class="form-group">
                     <label>ปรับเปลี่ยนสถานะ</label>
