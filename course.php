@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    
+<!-- navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center text-white" href="index.php" style="margin-right: 1rem;">
@@ -37,6 +38,7 @@
         </div>
     </nav>
 
+    <!-- รายละเอียดประชาสัมพันธ์หลักสูตร  -->
     <div class="container mt-5">
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             
@@ -74,6 +76,7 @@
 
     <figure style="margin-top: 50px;"></figure>
 
+    <!-- ชื่อปริญญาและสาขาวิชา  -->
     <div class="d-flex flex-wrap justify-content-center gap-4">
       
       <div class="card shadow-sm" style="min-width: 20rem; flex-shrink: 0; border-radius: 15px; border: 1px solid #dee2e6; overflow: hidden; scroll-snap-align: start;">
@@ -98,6 +101,8 @@
         </div>
       </div>
 
+        
+<!-- ข้อมูลหลักสูตร  -->
       <div class="card shadow-sm" style="min-width: 20rem; flex-shrink: 0; border-radius: 15px; border: 1px solid #dee2e6; overflow: hidden; scroll-snap-align: start;">
         <div class="card-header border-0 py-3 text-center" style="background-color: #DA2128; color: white;">
           <h6 class="m-0 fw-bold">ข้อมูลหลักสูตร</h6>
@@ -123,6 +128,7 @@
 
     <figure style="margin-top: 50px;"></figure>
     
+    <!-- ผลลัพธ์การเรียนรู้ที่คาดหวังจากหลักสูตร  -->
     <h1 class="text-center mb-2 fw-bold" style="color: brown; font-size: 2rem;">ผลลัพธ์การเรียนรู้ที่คาดหวังของหลักสูตร</h1>
     <section class="py-3">
         <div class="container">
@@ -201,8 +207,10 @@
             </div> </div>
     </section>
 
+    
     <figure style="margin-top: 30px;"></figure>
 
+    <!-- แผนการศึกษา  -->
     <section class="py-5" style="background-color: #f4f4f7;">
         <div class="container">
             <h1 class="text-center mb-2 fw-bold" style="color: brown; font-size: 2rem;">แผนการศึกษา</h1>
@@ -253,6 +261,8 @@
         </div>
     </section>
 
+
+    <!-- footer  -->
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-info">

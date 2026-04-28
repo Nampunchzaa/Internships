@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- nav bar -->
+
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center text-white" href="index.php" style="margin-right: 1rem;">
@@ -36,7 +36,7 @@
         </div>
     </div>
 </nav>
-<!-- ส่วนข้อมูลอาจารย์ -->
+
 <section class="container py-5">
     <h1 class="text-center mb-5" style="color: brown;">คณะบุคลากร</h1>
     
@@ -143,6 +143,7 @@
     </div>
 </section>
 
+<!-- รายละเอียดเพิ่มเติมในส่วนบุคลากร  -->
 <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
