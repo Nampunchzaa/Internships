@@ -83,7 +83,7 @@ INSERT INTO student (student_id, fullname, email, phone, year) VALUES
  
 INSERT INTO staff (staff_id, fullname, username, email, role)
 values
-(1,'admin','เจ้าหน้าที่คณะ','admin,admin@gmail.com','admin'),
+(1,'admin','admin','admin,admin@gmail.com','admin'),
 (2,'อ.ดร.ดิษฐ์ สุทธิวงศ์','Dit','dit@g.swu.ac.th','teacher'),
 (3,'อ.ดร.ฐิติ อติชาติชยากร','Thiti', 'thitik@g.swu.ac.th', 'teacher'),
 (4,'ผศ.ดร.วิภากร วัฒนสินธุ์','Vipakorn', 'vipakorn@g.swu.ac.th', 'teacher'),
